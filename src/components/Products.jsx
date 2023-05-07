@@ -50,13 +50,13 @@ const Products = () => {
         {filter.map((Products) => {
           return (
             <>
-            <div className="col-md-3">
-              <div class="card" >
-                <img src=".." class="card-img-top" alt={Products.score}/>
+            <div className="col-md-3 mb-4">
+              <div class="card h-100 text-center " >
+                <img src={Products.show?.image?.medium} class="card-img-top" alt={Products.show.name} height= "250px"/>
                 <div class="card-body">
-                  <h5 class="card-title">{Products.show.name}</h5>
+                  <h5 class="card-title">{Products.show.name} </h5>
                   <p class="card-text"></p>
-                  <Link to={`/Product/${Products.show.id}`} class="btn btn-primary">View Details</Link>
+                  <Link to={`/Product/${Products.show.name}`} class="btn btn-primary">View Details</Link>
                 </div>
               </div>
             </div>
@@ -72,10 +72,11 @@ const Products = () => {
 
   return (
     <>
-      <div className="containers">
+      <div className="containers my-5 py-5" >
         <div className="row">
-          <div className="col-12">
-            <h1>Latest movies </h1>
+          <div className="col-12 mb-5" >
+            <h1 className='display-6 fw-bolder text-center'>LATEST MOVIES </h1><hr />
+            
           </div>
         </div>
         <div className="row justify-content-center">
